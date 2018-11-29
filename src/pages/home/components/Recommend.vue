@@ -2,7 +2,7 @@
 	<div>
 		<div class="title">热销推荐</div>
 		<ul>
-			<li class="item boder-bottom" v-for="item in recommendList" :key="item.id">
+			<li class="item boder-bottom" v-for="item in list" :key="item.id">
 				<div class="item-img-wrapper">
 					<img :src="item.imgUrl" alt="长隆欢乐世界" class="item-img">
 				</div>
@@ -18,26 +18,9 @@
 <script>
 export default {
 	name: 'HomeRecommend',
-	data () {
-		return {
-			recommendList: [{
-				id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1811/48/481345746fe3ce9fa3.img.jpg_200x200_fbd18714.jpg',
-        title: '长隆欢乐世界',
-        desc: '浪漫欢乐之称'
-			}, {
-				id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1811/d4/d4a663613604238ea3.img.jpg_200x200_b412a8a2.jpg',
-        title: '长隆野生动物世界',
-        desc: '地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道'
-			}, {
-				id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/3b/3bd311262ee06d8c90.img.jpg_200x200_c118d7da.jpg',
-        title: '广州长隆旅游度假区',
-        desc: '地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地图图地道道地地道道地地道道'
-			}]
-		}
-	}
+	props: {
+    list: Array
+  }
 }
 </script>
 <style lang="stylus" scoped>

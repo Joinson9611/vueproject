@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿玩</div>
     <ul>
-      <li class="item" v-for="item in recommendList" :key="item.id">
+      <li class="item" v-for="item in list" :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl" class="item-img" >
         </div>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg',
-        title: '长隆欢乐世界',
-        desc: '浪漫欢乐之称'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg',
-        title: '长隆野生动物世界',
-        desc: '地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地道道'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg',
-        title: '广州长隆旅游度假区',
-        desc: '地地道道地地道道地地道道地地道道地地道道地地道道地地道道地地图图地道道地地道道地'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
